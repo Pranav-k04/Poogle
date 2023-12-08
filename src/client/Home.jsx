@@ -1,13 +1,25 @@
 import { useState } from 'react';
 import './App.css';
 
-function App() {
+function Poogle() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleSearch = () => {
-    // Perform the action here with the searchQuery state
-    console.log('Searching for:', searchQuery);
-    // You can add logic here to perform the search functionality using searchQuery
+  const handleSearch = async() => {
+    // Check if the search query is not empty
+    if (searchQuery.trim() !== '') {
+      // Construct the URL
+      const apiUrl = `http://localhost:6969/api/search?q=${searchQuery.trim()}`;
+
+      // Perform the fetch request
+      await fetch(apiUrl)
+        .then(response => response.json()) // Parse response data as JSON
+        .then(data => {
+          console.log('Response Data:', data);
+        })
+        .catch(error => {
+          console.error('Fetch Error:', error);
+        });
+    }
   };
 
   const handleInputChange = (event) => {
@@ -37,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default Poogle;
