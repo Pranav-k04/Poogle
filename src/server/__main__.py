@@ -3,6 +3,8 @@ import uvicorn
 from src.server import app
 from src.server.config import PORT
 from fastapi.middleware.cors import CORSMiddleware
+from src.server.utils import build_assets
+
 
 loop = asyncio.get_event_loop()
 
@@ -14,10 +16,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.on_event("startup")
+def build():
+    build_assets()
+
 async def main():
     uvicorn.run(
         "src.server.__main__:app",
-        host="0.0.0.0",
+        host="localhost",
         port=PORT,
         reload=True
     )

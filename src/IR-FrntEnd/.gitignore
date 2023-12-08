@@ -22,9 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-.venv
-files
-__pycache__
-idf
-src/server/assets/*.json
