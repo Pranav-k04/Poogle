@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-
+import Result_page from './Search';
 function Poogle() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setsearchResults] = useState([]);
+  
 
   const handleSearch = async() => {
     // Check if the search query is not empty
@@ -13,9 +15,7 @@ function Poogle() {
       // Perform the fetch request
       await fetch(apiUrl)
         .then(response => response.json()) // Parse response data as JSON
-        .then(data => {
-          console.log('Response Data:', data);
-        })
+        .then(setsearchResults)
         .catch(error => {
           console.error('Fetch Error:', error);
         });
@@ -45,6 +45,7 @@ function Poogle() {
           </button>
         </div>
       </div>
+      <Result_page data= {searchResults}/>
     </>
   );
 }

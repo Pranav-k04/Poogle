@@ -25,14 +25,13 @@ def process_query(query: str):
                     score[key]=idf[x][key]
                 score[key]+=idf[x][key]
     sorted_Dict = sorted(score.items(),key=lambda x:x[1],reverse=True)
-    k=600
+    k = 600 if len(sorted_Dict) else len(sorted_Dict)
     top_k =dict(sorted_Dict[:k])
-    url_list=[]
-    title_list=[]
+    output = []
     for k in top_k.keys():
-        url_list.append(urls[k])
-        title_list.append(titles[k])
-    return {
-        "urls": url_list,
-        "titles": title_list
-    }
+        output.append({
+            "title": titles[k],
+            "url": urls[k]
+        })
+    
+    return output

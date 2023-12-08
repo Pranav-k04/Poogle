@@ -1,23 +1,24 @@
 .wrapper {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  height: 100px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2%;
+  padding-left: 30px; /* To create space from the left */
+  margin-bottom: 0%;
 }
 
 .title {
-  margin-top: 5%;
-  margin-bottom: 0px;
-  font-size: 75px;
-  color:#202124;
+  margin: 0; /* Reset margin */
+  font-size: 50px; 
+  color: #202124;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .input-container {
-  position: relative;
-  width: 500px;
-  border: none;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 0px; 
 }
 
 .input-box {
@@ -31,8 +32,9 @@
 
 .search-button {
   position: absolute;
-  top: 23%;
-  right: 5%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   color: white;
   background: transparent;
   border: none;
