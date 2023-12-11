@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Information Retrivel Mini Project 
+# Poogle 
+This Project a document retrivel project : contains 2 parts CLient side and server side 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+For corpus refer to this link to download the zip file & EXTRACT IT and name the data as 'files' :
+corpus zip file : total files around 60,000 files.
+https://drive.google.com/file/d/1jF-hBvxCBHOaT62jUueBItD8Q45BKG_Z/view?usp=sharing
 
-Currently, two official plugins are available:
+if above takes too much time directly download assets that is indexed data from the corpus.
+https://drive.google.com/file/d/1jF-hBvxCBHOaT62jUueBItD8Q45BKG_Z/view?usp=sharing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Set up for Client Side of the project follow the below codes : 
+`$ npm i`
 
-## Expanding the ESLint configuration
+Set up for Server Side of the Project (open new terminal):
+`pip install fastapi`
+`pip install "uvicorn[standard]`
+`python -m venv .venv`
+`pip install -r requirements.txt`
+# this set up might take some time please wait patiently
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+TO run the whole Project : 
+`npm run dev`
