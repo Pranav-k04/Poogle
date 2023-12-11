@@ -21,6 +21,8 @@ Set up for Server Side of the Project (open new terminal):
 
 TO run the whole Project : 
 `npm run dev`
+    
+    
 Project Decription : 
 The client side of this project is made in React.js and uses FastAPI to send requests to the backend of the project that is the server side.
 There are 4 main folders in the server side of this project, 
