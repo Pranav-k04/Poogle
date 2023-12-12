@@ -1,4 +1,4 @@
-# Information Retrivel Mini Project 
+# Information Retrieval Mini Project 
 # Poogle 
 This Project is a document retrivel project, contains 2 parts CLient side and server side 
 
@@ -30,3 +30,7 @@ Assets: these are Indexed data from the corpus, code in server/core/tfidf.py
 Core: There folders have all the computation code for creating IDF and tf-idf.py and query_processing.py 
 Routes: The Routes link the front end of the server to server side.
 Utils: have the source code to start the server essentially uvicorn, FastAPi code.
+
+
+Further improvements in Poogle :
+Updating retrieval scores based on the Relevance FeedBack given by the client.
